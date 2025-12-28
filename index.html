@@ -40,8 +40,8 @@
   </head>
 
   <!-- cover -->
-  <section>
-    <div class="jumbotron text-center mt-0 pb-5">
+  <section style="background-color: #ebf0f1;">
+    <div class="jumbotron text-center mt-0 pb-5" style="background-color: transparent; margin-top: 0;">
       <div class="container">
         <div class="row">
           <div class="col-12">
@@ -84,19 +84,20 @@
         <div class="col-12 text-center">
           <div class="row" style="margin-bottom:5px">
             <div class="col" style="text-align:center">
-              <img src="images/intro_new.png" width="95%">
+              <img src="images/INTRO.png" width="95%">
             </div>
           </div>
           <div id="abstract" class="x-gradient-block">
-            Millimeter-wave radar provides a  privacy-preserving solution for human motion analysis, yet its sparse point clouds pose significant challenges for semantic understanding. 
-            We present Radar-LLM, the first framework that leverages large language models (LLMs) for human motion understanding using millimeter-wave radar as the sensing modality. 
-            Our approach introduces two key innovations: (1) a motion-guided radar tokenizer based on our Aggregate VQ-VAE architecture that incorporates deformable body templates 
-            and masked trajectory modeling to encode spatiotemporal point clouds into compact semantic tokens, and 
-            (2) a radar-aware language model that establishes cross-modal alignment between radar and text in a shared embedding space. 
-            To address data scarcity, we introduce a physics-aware synthesis pipeline that generates realistic radar-text pairs from motion-text datasets. 
-            Extensive experiments demonstrate that Radar-LLM achieves state-of-the-art performance across both synthetic and real-world benchmarks, 
-            enabling accurate translation of millimeter-wave signals to natural language descriptions. This breakthrough facilitates comprehensive motion understanding 
-            in privacy-sensitive applications like healthcare and smart homes. We will release the full implementation to support further research.
+            Millimeter-wave (mmWave) radar is a promising modality for privacy-preserving and robust Human Activity Recognition (HAR). 
+            However, the potential of current mmWave systems is severely constrained by their rigid classification-based formulation. 
+            By reducing complex human behaviors to a finite set of predefined labels (e.g., sitting or walking), these methods fail to capture the intrinsic continuity, transitions, and contextual dependencies of real-world actions.
+            We present mmScribe, the first end-to-real human motion understanding framework that transforms sparse mmWave point clouds into fine-grained natural language descriptions.
+            To bridge the gap between RF signals and Large Language Models (LLMs), we introduce three innovations:
+            (1) A spatio-temporal masked autoencoder that exploits motion continuity to extract robust dynamics from sparse radar signal;
+            (2) A coarse-to-fine alignment strategy that decouples feature projection from semantic tuning to prevent catastrophic forgetting in LLMs; and
+            (3) A physics-informed hybrid synthesis pipeline fusing ray-traced reflections with real-world clutter to enable robust sim-to-real transfer.
+            We implement mmScribe on COTS mmWave radars and conduct extensive real-world experiments.
+            The results demonstrate mmScribe outperformed the state-of-the-arts by 22.44% in SimCSE and 6.89% in Bertscore for real collected data, marking a paradigm shift from rigid activity recognition to open-vocabulary motion understanding.
           </div>
         </div>
       </div>
