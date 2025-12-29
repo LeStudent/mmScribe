@@ -141,159 +141,19 @@
      </div>
   </section>
 
-  
 
-  <!-- tokenizer -->
-  <section>
-    <div class="container">
-      <div class="row">
-        <div class="col-12 text-center">
-          <div class="x-section-title"><div class="x-gradient-font">Radar Tokenizer</div></div>
-          <img src="images/vq.png" width="90%">
-        </div>
-      </div>
-      <br>
-      <p class="text-left">
-        Architecture and training pipeline of motion-guided radar tokenizer. 
-        The Motion-guided Radar Tokenizer, built upon our Aggregate VQ-VAE architecture, compresses radar point cloud sequences 
-        into discrete semantic tokens through point cloud sequence reconstruction and motion embedding learning.
-      </p>
-    </div>
-  </section>
 
   
-
-  <!-- pcg results -->
-<!--   <section>
-    <div class="container">
-      <div class="row">
-        <div class="col-12 text-center">
-          <div class="x-section-title"><div class="x-gradient-font">Virtual Radar Point Cloud Results</div></div>
-          <div id="results-carousel" class="carousel results-carousel">
-            <div class="item item-steve video-grid1">
-              <video poster="" id="steve gt_rgb" autoplay muted loop playsinline height="100%">
-                <source src="video/v3.mp4" type="video/mp4">
-              </video>
-            </div>
-            <div class="item item-steve video-grid1">
-              <video poster="" id="steve gt_rgb" autoplay muted loop playsinline height="100%">
-                <source src="video/v2.mp4" type="video/mp4">
-              </video>
-            </div>
-            <div class="item item-steve video-grid1">
-              <video poster="" id="steve gt_rgb" autoplay muted loop playsinline height="100%">
-                <source src="video/v1.mp4" type="video/mp4">
-              </video>
-            </div>
-          </div>
-        </div>
-      </div>
-      <br>
-      <!-- <p class="text-left">
-        text
-      </p> -->
-<!--     </div>
-  </section>
- --> -->
-  <!-- qualitative results -->
-  <section>
-    <div class="container">
-      <div class="row">
-        <div class="col-12 text-center">
-          <div class="x-section-title">
-            <div class="x-gradient-font">Qualitative Results on Virtual Data</div>
-          </div>
-          <div id="virtual-results-carousel" class="carousel results-carousel">
-            <div class="item item-steve video-grid1">
-              <video poster="" id="steve-gt-rgb" autoplay muted loop playsinline height="100%">
-                <source src="video/dv5.mp4" type="video/mp4">
-              </video>
-            </div>
-            <div class="item item-steve video-grid1">
-              <video poster="" id="steve-gt-rgb" autoplay muted loop playsinline height="100%">
-                <source src="video/dv4.mp4" type="video/mp4">
-              </video>
-            </div>
-            <div class="item item-steve video-grid1">
-              <video poster="" id="steve-gt-rgb" autoplay muted loop playsinline height="100%">
-                <source src="video/dv3.mp4" type="video/mp4">
-              </video>
-            </div>
-            <div class="item item-steve video-grid1">
-              <video poster="" id="steve-gt-rgb" autoplay muted loop playsinline height="100%">
-                <source src="video/dv2.mp4" type="video/mp4">
-              </video>
-            </div>
-            <div class="item item-steve video-grid1">
-              <video poster="" id="steve-gt-rgb" autoplay muted loop playsinline height="100%">
-                <source src="video/dv1.mp4" type="video/mp4">
-              </video>
-            </div>
-          </div>
-        </div>
-      </div>
-      <br>
-      <div class="row">
-        <div class="col-12 text-center">
-          <div class="x-section-title">
-            <div class="x-gradient-font">Qualitative Results on Real Data</div>
-          </div>
-          <div id="real-results-carousel" class="carousel results-carousel">
-            <div class="item item-steve video-grid1">
-              <video poster="" id="steve-gt-rgb" autoplay muted loop playsinline height="100%">
-                <source src="video/dr1.mp4" type="video/mp4">
-              </video>
-            </div>
-            <div class="item item-steve video-grid1">
-              <video poster="" id="steve-gt-rgb" autoplay muted loop playsinline height="100%">
-                <source src="video/dr2.mp4" type="video/mp4">
-              </video>
-            </div>
-            <div class="item item-steve video-grid1">
-              <video poster="" id="steve-gt-rgb" autoplay muted loop playsinline height="100%">
-                <source src="video/dr3.mp4" type="video/mp4">
-              </video>
-            </div>
-            <div class="item item-steve video-grid1">
-              <video poster="" id="steve-gt-rgb" autoplay muted loop playsinline height="100%">
-                <source src="video/dr4.mp4" type="video/mp4">
-              </video>
-            </div>
-          </div>
-        </div>
-      </div>
-  
-      <br>
-    </div>
-  </section>
-
-  <!-- comparisons -->
-  <section>
-    <div class="container">
-      <div class="row">
-        <div class="col-12 text-center">
-          <div class="x-section-title"><div class="x-gradient-font">Quantitative Results</div></div>
-          <img src="images/comp.png" width="90%">
-        </div>
-      </div>
-      <br>
-      <p class="text-left">
-        Comparison with state-of-the-art methods on virtual and real datasets.
-      </p>
-    </div>
-  </section>
-
   <!-- citation -->
   <section>
-  <div class="container">
+  <div class="container" style="width: 900px; max-width: 100%; margin: 0 auto; padding: 0 15px;">
     <div class="row ">
       <div class="col-12">
-        <div class="x-section-title"><div class="x-gradient-font">Citation</div></div>
+        <div class="x-section-title"><div style="font-size: 32px; font-weight: bold; color: #0066cc; margin-bottom: 10px;">Citation</div></div>
         <p class="bibtex x-gradient-block">
 @InProceedings{shan2025mojito,
-  title   = {RadarLLM: Empowering Large Language Models to Understand Human Motion from Millimeter-wave Point Cloud Sequence},
-  author  = {Lai, Zengyuan and Yang, Jiarui and Xia, Songpengcheng and Lin, Lizhou and Sun, Lan and 
-             Wang, Renwen and Liu, Jianran and Wu, Qi and Pei, Ling},
+  title   = {mmScribe: Understand Human Motion from Millimeter-wave Point Cloud Sequences},
+  author  = {Li, Jincheng and Tong, Shuai and Jia, Yunzhe and Chen, Zhengtong and Wang, Lin and Wang, Jiliang},
   journal = {arXiv preprint arXiv:xxxx.xxxxx},
   year    = {2025}
 }
@@ -305,9 +165,9 @@
 
   <!-- bottom bar -->
   <section>
-  <div id="bottombar">
-    <div><b>RadarLLM: Empowering Large Language Models to Understand Human Motion from Millimeter-wave Point Cloud Sequence</b></div>
-    <div>Thanks to <a href="https://koyui.github.io/mojito/" target="_blank">Ziwei Shan</a> for the website template</div>
+  <div id="bottombar" style="background-color: #f3e5f5; color: #4a4a4a; text-align: center; padding: 30px 15px; margin-top: 50px;">
+    <div style="margin: 8px 0;"><b>mmScribe: Understanding Human Motion from Millimeter-Wave Point Cloud Sequences</b></div>
+    <div style="margin: 8px 0;">Thanks to <a href="https://koyui.github.io/mojito/" target="_blank" style="color: #7b1fa2; text-decoration: none;">Ziwei Shan</a> for the website template</div>
   </div>
   </section>
 
