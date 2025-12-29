@@ -88,7 +88,7 @@
             </div>
           </div>
           <div id="abstract" class="x-gradient-block" style="width: 900px; max-width: 100%; margin: 0 auto; background-color: #f8f9fa; padding: 30px; border-radius: 10px; text-align: justify;">
-            Abstract: &nbsp;&nbsp; Millimeter-wave (mmWave) radar is a promising modality for privacy-preserving and robust Human Activity Recognition (HAR). 
+            <b>Abstract:</b> &nbsp; Millimeter-wave (mmWave) radar is a promising modality for privacy-preserving and robust Human Activity Recognition (HAR). 
             However, the potential of current mmWave systems is severely constrained by their rigid classification-based formulation. 
             By reducing complex human behaviors to a finite set of predefined labels (e.g., sitting or walking), these methods fail to capture the intrinsic continuity, transitions, and contextual dependencies of real-world actions.
             We present mmScribe, the first end-to-real human motion understanding framework that transforms sparse mmWave point clouds into fine-grained natural language descriptions.
@@ -103,6 +103,28 @@
       </div>
     </div>
   </section>
+  
+<!-- Demo -->
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <div class="x-section-title"><div class="x-gradient-font">mmScribe Demo</div></div>
+            <video poster="" id="steve gt_rgb" autoplay muted loop playsinline height="100%">
+              <source src="video/pcg.mp4" type="video/mp4">
+            </video>
+        </div>
+      </div>
+      <br>
+      <p class="text-left">
+        Virtual radar-text data generation pipeline. The Radar-Text dataset is constructed by simulating radar reflections 
+        from SMPL motion sequences using ray tracing and signal processing techniques, based on existing motion-text datasets.
+      </p>
+     </div>
+  </section>
+
+
+  
 
   <!-- pipeline -->
   <section>
@@ -140,24 +162,7 @@
     </div>
   </section>
 
-  <!-- virtualdata -->
-  <section>
-    <div class="container">
-      <div class="row">
-        <div class="col-12 text-center">
-          <div class="x-section-title"><div class="x-gradient-font">Virtual Data Generation</div></div>
-            <video poster="" id="steve gt_rgb" autoplay muted loop playsinline height="100%">
-              <source src="video/pcg.mp4" type="video/mp4">
-            </video>
-        </div>
-      </div>
-      <br>
-      <p class="text-left">
-        Virtual radar-text data generation pipeline. The Radar-Text dataset is constructed by simulating radar reflections 
-        from SMPL motion sequences using ray tracing and signal processing techniques, based on existing motion-text datasets.
-      </p>
-     </div>
-  </section>
+  
 
   <!-- pcg results -->
 <!--   <section>
