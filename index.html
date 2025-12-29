@@ -37,6 +37,48 @@
     <script src="js/bulma-slider.min.js"></script>
     <script src="js/index.js"></script>
     <script src="js/video_comparison.js" defer></script>
+<style>
+  .video-container {
+    width: 800px;
+    max-width: 100%;
+    margin: 0 auto;
+    position: relative; 
+    text-align: center;
+  }
+  .toggle-video {
+    width: 100%;
+    display: none; 
+  }
+  .toggle-video.active {
+    display: block; 
+    animation: fadeIn 0.5s;
+  }
+  .controls {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #7b1fa2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+  }
+
+  button:hover {
+    background-color: #4a0072;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+</style>
+    
   </head>
 
   <!-- cover -->
@@ -151,12 +193,30 @@
           <div style="font-size: 32px; font-weight: bold; color: #7b1fa2; margin-bottom: 10px;">Data Generation Quality</div>
           <div></div>
 
-          <div style="font-size: 32px; font-weight: bold; color: #7b1fa2; margin-bottom: 10px;">Understanding Results on Synthetic Dataset</div>
-          <div></div>
+          <div style="font-size: 32px; font-weight: bold; color: #7b1fa2; margin-bottom: 10px;">Understanding Results</div>
+          <div class="video-container">
+            <video class="toggle-video active" id="video1" autoplay muted loop playsinline>
+                <source src="images/result-s.mp4" type="video/mp4">
+            </video>     
+            <video class="toggle-video" id="video2" autoplay muted loop playsinline>
+                <source src="images/result-r.mp4" type="video/mp4">
+            </video>
+            <div class="controls">
+              <button onclick="showVideo(1)">Show Result S</button>
+              <button onclick="showVideo(2)">Show Result R</button>
+            </div>
+          </div>
+<script>
+  function showVideo(index) {
+    const videos = document.querySelectorAll('.toggle-video');
+    videos.forEach(v => v.classList.remove('active'));
+    if(videos[index-1]) {
+      videos[index-1].classList.add('active');
+    }
+  }
+</script>
 
-          <div style="font-size: 32px; font-weight: bold; color: #7b1fa2; margin-bottom: 10px;">Understanding Results on Real-Collected Dataset</div>
-          <div></div>
-          
+         
         </div>
       </div>
     </div>
