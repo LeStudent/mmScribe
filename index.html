@@ -37,47 +37,36 @@
     <script src="js/bulma-slider.min.js"></script>
     <script src="js/index.js"></script>
     <script src="js/video_comparison.js" defer></script>
-<style>
-  .video-container {
-    width: 800px;
-    max-width: 100%;
-    margin: 0 auto;
-    position: relative; 
-    text-align: center;
-  }
-  .toggle-video {
-    width: 100%;
-    display: none; 
-  }
-  .toggle-video.active {
-    display: block; 
-    animation: fadeIn 0.5s;
-  }
-  .controls {
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-  }
-  button {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    background-color: #7b1fa2;
-    color: white;
-    border: none;
-    border-radius: 5px;
-  }
-
-  button:hover {
-    background-color: #4a0072;
-  }
-
-  @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-  }
-</style>
+  <style>
+    /* 自定义样式：让视频居中并限制最大宽度 */
+    .item video {
+      display: block;
+      margin: 0 auto;
+      max-width: 800px; /* 限制视频最大宽度 */
+      width: 100%;
+      border-radius: 5px; /* 可选：圆角 */
+    }
+    
+    /* 调整箭头颜色，使其在视频上更明显 */
+    .carousel-navigation div {
+      background-color: rgba(0, 0, 0, 0.3) !important;
+      color: white !important;
+      width: 40px !important;
+      height: 40px !important;
+      border-radius: 50%;
+    }
+    .carousel-navigation div:hover {
+      background-color: rgba(0, 0, 0, 0.8) !important;
+    }
+    
+    /* 调整标题样式 */
+    .x-gradient-font {
+      font-size: 32px; 
+      font-weight: bold; 
+      color: #7b1fa2; 
+      margin-bottom: 20px;
+    }
+  </style>
     
   </head>
 
@@ -194,26 +183,37 @@
           <div></div>
 
           <div style="font-size: 32px; font-weight: bold; color: #7b1fa2; margin-bottom: 10px;">Understanding Results</div>
-          <div class="video-container">
-            <video class="toggle-video active" id="video1" autoplay muted loop playsinline>
-                <source src="images/result-s.mp4" type="video/mp4">
-            </video>     
-            <video class="toggle-video" id="video2" autoplay muted loop playsinline>
-                <source src="images/result-r.mp4" type="video/mp4">
+          
+          <div id="results-carousel" class="carousel results-carousel">        
+          <!-- 视频 Item 1 -->
+          <div class="item item-video1">
+            <video poster="" id="video-s" autoplay muted loop playsinline height="100%">
+              <source src="images/result-s.mp4" type="video/mp4">
             </video>
-            <div class="controls">
-              <button onclick="showVideo(1)">Show Result S</button>
-              <button onclick="showVideo(2)">Show Result R</button>
-            </div>
+            <p class="has-text-centered is-size-5 has-text-weight-bold mt-2">Result S</p>
           </div>
-<script>
-  function showVideo(index) {
-    const videos = document.querySelectorAll('.toggle-video');
-    videos.forEach(v => v.classList.remove('active'));
-    if(videos[index-1]) {
-      videos[index-1].classList.add('active');
-    }
-  }
+          
+          <!-- 视频 Item 2 -->
+          <div class="item item-video2">
+            <video poster="" id="video-r" autoplay muted loop playsinline height="100%">
+              <source src="images/result-r.mp4" type="video/mp4">
+            </video>
+            <p class="has-text-centered is-size-5 has-text-weight-bold mt-2">Result R</p>
+          </div>
+        </div>
+
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    bulmaCarousel.attach('#results-carousel', {
+      slidesToScroll: 1, 
+      slidesToShow: 1,   
+      loop: true,        
+      autoplay: false,   
+      pagination: true,  
+      navigation: true,  
+      infinite: true
+    });
+  });
 </script>
 
          
